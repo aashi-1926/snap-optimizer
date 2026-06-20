@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snap Optimizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">⚡</div>
+
+    <h1>Snap Optimizer</h1>
+
+    <p class="subtitle">
+        Upload, optimize and deliver images instantly with Cloudinary.
+    </p>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="image" required>
+
+        <br><br>
+
+        <button type="submit">
+            Upload Image
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

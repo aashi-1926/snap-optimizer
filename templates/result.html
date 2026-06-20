@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Successful</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>✅ Upload Successful</h1>
+
+    <p>Your image has been uploaded to Cloudinary.</p>
+
+    <img src="{{ image_url }}" width="600">
+
+    <br><br>
+
+    <a href="{{ image_url }}" target="_blank">
+        View Full Image
+    </a>
+
+    <br><br>
+
+    <a href="/">
+        Upload Another Image
+    </a>
+
+</div>
+
+</body>
+</html>
