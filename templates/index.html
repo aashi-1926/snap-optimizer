@@ -1,35 +1,686 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Snap Optimizer</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Snap Optimizer AI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+
 </head>
 
 <body>
 
-<div class="container">
+<div id="tsparticles"></div>
 
-    <div class="logo">⚡</div>
+<div class="noise"></div>
 
-    <h1>Snap Optimizer</h1>
+<div class="mouse-light"></div>
 
-    <p class="subtitle">
-        Upload, optimize and deliver images instantly with Cloudinary.
-    </p>
+<section class="hero">
 
-    <form method="POST" enctype="multipart/form-data">
+<div class="glass">
 
-        <input type="file" name="image" required>
+<div class="badge">
 
-        <br><br>
+<i class="bi bi-stars"></i>
 
-        <button type="submit">
-            Upload Image
-        </button>
+Powered by Cloudinary AI
 
+</div>
+
+<h1>
+
+Transform Images
+
+<span>Beautifully</span>
+
+with AI
+
+</h1>
+
+<p class="hero-text">
+
+Professional AI-powered image enhancement,
+background removal, resizing,
+optimization and social-ready exports.
+
+</p>
+
+<form method="POST"
+enctype="multipart/form-data">
+
+<div class="upload-box">
+
+<input
+type="file"
+id="image"
+name="image"
+accept="image/*"
+hidden
+required>
+
+<label
+for="image"
+class="upload-area">
+
+<div class="upload-circle">
+
+<i class="bi bi-cloud-arrow-up-fill"></i>
+
+</div>
+
+<h2>
+
+Drop your image here
+
+</h2>
+
+<p>
+
+or click anywhere to upload
+
+</p>
+
+<span>
+
+PNG • JPG • WEBP
+
+</span>
+
+<div class="upload-line"></div>
+
+</label>
+
+<p id="filename">
+
+No image selected
+
+</p>
+
+<img
+id="preview"
+src=""
+alt="Preview">
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>
+
+15+
+
+</h2>
+
+<p>
+
+AI Tools
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+1 Sec
+
+</h2>
+
+<p>
+
+Processing
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+HD
+
+</h2>
+
+<p>
+
+Output
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+Cloud
+
+</h2>
+
+<p>
+
+Powered
+
+</p>
+
+</div>
+
+</div>
+    <!-- Feature Cards -->
+
+<div class="feature-title">
+
+<h2>Everything You Need</h2>
+
+<p>
+Professional AI tools powered by Cloudinary
+</p>
+
+</div>
+
+<div class="cards">
+
+    <!-- AI EFFECTS -->
+
+    <div class="card">
+
+        <div class="card-icon emerald">
+            ✨
+        </div>
+
+        <h3>AI Effects</h3>
+
+        <p>
+            Instantly enhance photos with
+            HDR, blur, black & white,
+            vintage and smart optimization.
+        </p>
+
+        <button type="button" onclick="openModal('effects')">
+    Explore Effects →
+</button>
+
+    </div>
+
+    <!-- SOCIAL -->
+
+    <div class="card">
+
+        <div class="card-icon blue">
+            📱
+        </div>
+
+        <h3>Social Media</h3>
+
+        <p>
+            Create Instagram posts,
+            stories, YouTube thumbnails
+            and LinkedIn banners.
+        </p>
+
+        <button type="button" onclick="openModal('social')">
+    Explore Social →
+</button>
+
+    </div>
+
+    <!-- PROFESSIONAL -->
+
+    <div class="card">
+
+        <div class="card-icon green">
+            💼
+        </div>
+
+        <h3>Professional</h3>
+
+        <p>
+            Passport photos,
+            profile pictures,
+            remove background
+            and compress images.
+        </p>
+
+        <button type="button" onclick="openModal('professional')">
+    Explore Professional →
+</button>
+
+    </div>
+
+</div>
+
+<!-- Prompt Section -->
+
+<div class="prompt-card">
+
+<div class="prompt-header">
+
+<i class="bi bi-robot"></i>
+
+<h2>
+
+Describe Your Image
+
+</h2>
+
+</div>
+
+<p>
+
+Type naturally and let AI understand
+what you want.
+
+</p>
+
+<input
+
+type="text"
+
+name="prompt"
+
+class="prompt-box"
+
+placeholder="Example: Make this image brighter and create a LinkedIn banner"
+
+>
+
+</div>
+
+
+<!-- CTA -->
+
+<div class="transform-box">
+
+<button
+class="main-btn"
+type="submit">
+
+<span>
+
+Transform Image
+
+</span>
+
+<i class="bi bi-arrow-right-circle-fill"></i>
+
+</button>
+
+<p class="powered">
+
+⚡ AI powered by Cloudinary • Fast • Secure • High Quality
+
+</p>
+
+</div>
     </form>
 
 </div>
 
+</section>
+
+<script>
+/* ---------- Image Preview ---------- */
+
+const imageInput = document.getElementById("image");
+const preview = document.getElementById("preview");
+const fileName = document.getElementById("filename");
+const uploadArea = document.querySelector(".upload-area");
+
+imageInput.addEventListener("change", function () {
+
+    if (!this.files.length) return;
+
+    const file = this.files[0];
+
+    fileName.innerHTML = "✅ " + file.name;
+
+    preview.src = URL.createObjectURL(file);
+
+    preview.style.display = "block";
+
+    preview.style.opacity = "0";
+
+    preview.style.transform = "scale(.9)";
+
+    setTimeout(() => {
+
+        preview.style.opacity = "1";
+        preview.style.transform = "scale(1)";
+
+    },100);
+
+});
+
+/* ---------- Drag & Drop ---------- */
+
+["dragenter","dragover"].forEach(eventName=>{
+
+    uploadArea.addEventListener(eventName,e=>{
+
+        e.preventDefault();
+
+        uploadArea.classList.add("drag");
+
+    });
+
+});
+
+["dragleave","drop"].forEach(eventName=>{
+
+    uploadArea.addEventListener(eventName,e=>{
+
+        e.preventDefault();
+
+        uploadArea.classList.remove("drag");
+
+    });
+
+});
+
+uploadArea.addEventListener("drop",function(e){
+
+    imageInput.files=e.dataTransfer.files;
+
+    imageInput.dispatchEvent(new Event("change"));
+
+});
+
+/* ---------- Mouse Light ---------- */
+
+const mouseLight=document.querySelector(".mouse-light");
+
+document.addEventListener("mousemove",e=>{
+
+    mouseLight.style.left=e.clientX+"px";
+
+    mouseLight.style.top=e.clientY+"px";
+
+});
+
+/* ---------- Loading Animation ---------- */
+
+const form=document.querySelector("form");
+
+form.addEventListener("submit",function(){
+
+    const btn=document.querySelector(".main-btn");
+
+    btn.innerHTML="⏳ Optimizing Image...";
+
+    btn.disabled=true;
+
+});
+
+/* ---------- tsParticles ---------- */
+
+tsParticles.load("tsparticles",{
+
+background:{
+color:"#07131B"
+},
+
+fpsLimit:60,
+
+particles:{
+
+number:{
+value:65
+},
+
+color:{
+value:[
+"#38BDF8",
+"#34D399",
+"#A7F3D0",
+"#99F6E4"
+]
+},
+
+links:{
+enable:true,
+distance:150,
+color:"#34D399",
+opacity:.15,
+width:1
+},
+
+move:{
+enable:true,
+speed:1,
+outModes:{
+default:"bounce"
+}
+},
+
+opacity:{
+value:.5
+},
+
+size:{
+value:{
+min:2,
+max:5
+}
+}
+
+}
+
+});
+function setPrompt(text){
+
+document.querySelector(".prompt-box").value=text;
+
+}
+const tools={
+
+effects:[
+"enhance",
+"hdr",
+"sharpen",
+"bright",
+"black and white",
+"grayscale",
+"vintage",
+"blur"
+],
+
+social:[
+"instagram post",
+"instagram story",
+"youtube thumbnail",
+"linkedin banner"
+],
+
+professional:[
+"passport photo",
+"profile picture",
+"linkedin profile",
+"remove background",
+"compress image"
+]
+
+};
+
+function openModal(type){
+
+document.getElementById("toolModal").style.display="flex";
+
+document.getElementById("modalTitle").innerHTML=
+type.charAt(0).toUpperCase()+type.slice(1);
+
+let html="";
+
+tools[type].forEach(function(item){
+
+html+=`
+<button class="tool-btn"
+onclick="setPrompt('${item}');closeModal();">
+
+${item}
+
+</button>
+`;
+
+});
+
+document.getElementById("modalButtons").innerHTML=html;
+
+}
+
+function closeModal(){
+
+document.getElementById("toolModal").style.display="none";
+
+}
+</script>
+<!-- ================= AI MODAL ================= -->
+
+<div id="toolModal" class="tool-modal">
+
+    <div class="tool-modal-content">
+
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div id="modalButtons"></div>
+
+    </div>
+
+</div>
+<!-- ================= FOOTER ================= -->
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <h2>Ready to Transform Your Images?</h2>
+
+    <p>
+        Enhance, optimize, resize and create professional images
+        in seconds with AI.
+    </p>
+
+    <button
+        type="button"
+        class="cta-btn"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+        🚀 Start Transforming
+
+    </button>
+
+</section>
+
+<!-- ================= PREMIUM FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <h2>Ready to Create Stunning Images with AI? 🚀</h2>
+
+
+            <p>
+     From social media posts to professional profile photos,
+    transform every image effortlessly with AI-powered tools.
+</p>
+
+
+    </div>
+
+    <div class="footer-grid">
+
+        <!-- Developer -->
+
+        <div class="footer-card">
+
+            <i class="bi bi-person-circle footer-icon"></i>
+
+            <h3>Developer</h3>
+
+            <p><strong>Aashika Gupta</strong></p>
+
+            <p>AI & Backend developer</p>
+
+            <p>Backend • Flask • Cloudinary AI</p>
+
+        </div>
+
+        <!-- Tech -->
+
+        <div class="footer-card">
+
+            <i class="bi bi-cpu footer-icon"></i>
+
+            <h3>Tech Stack</h3>
+
+            <p>🐍 Python</p>
+
+            <p>🌐 Flask</p>
+
+            <p>☁ Cloudinary AI</p>
+
+            <p>🎨 HTML • CSS • JavaScript</p>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-card">
+
+            <i class="bi bi-envelope-paper footer-icon"></i>
+
+            <h3>Connect</h3>
+
+            <p>📧 aashika9630@gmail.com</p>
+
+            <p>💻 GitHub</p>
+
+            <p>💼 LinkedIn</p>
+
+            <p>🌍 Open to collaboration</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        Built with ❤️ using Flask + Cloudinary AI
+
+        <br><br>
+
+        © 2026 Snap Optimizer AI • Designed & Developed by Aashika Gupta
+
+    </div>
+
+</footer>
+
 </body>
+
 </html>

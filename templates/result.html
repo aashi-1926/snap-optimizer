@@ -1,33 +1,618 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Upload Successful</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Snap Optimizer AI | AI Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="noise"></div>
 
-    <h1>✅ Upload Successful</h1>
+<div class="mouse-light"></div>
 
-    <p>Your image has been uploaded to Cloudinary.</p>
+<div class="result-container">
 
-    <img src="{{ image_url }}" width="600">
+<div class="glass">
 
-    <br><br>
+<div class="success">
 
-    <a href="{{ image_url }}" target="_blank">
-        View Full Image
-    </a>
+<i class="bi bi-patch-check-fill"></i>
 
-    <br><br>
-
-    <a href="/">
-        Upload Another Image
-    </a>
+AI Transformation Complete
 
 </div>
 
+<h1>
+
+Your Image is
+
+<span>Ready</span>
+
+</h1>
+
+<p class="hero-text">
+
+Cloudinary AI has successfully processed and optimized your image using intelligent transformations.
+
+</p>
+
+<!-- AI Dashboard -->
+
+<div class="ai-dashboard">
+
+<div class="dashboard-card">
+
+<h2>92</h2>
+
+<p>AI Score</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>
+
+{{ ((1 - transformed_bytes/original_bytes)*100)|round(0) }}%
+
+</h2>
+
+<p>Size Saved</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>HD</h2>
+
+<p>Output Quality</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>✓</h2>
+
+<p>Processed</p>
+
+</div>
+
+</div>
+
+<!-- BEFORE / AFTER -->
+
+<div class="image-comparison">
+
+<div class="image-card">
+
+<div class="status-badge">
+
+📷 Original Image
+
+</div>
+
+<img
+src="{{ original_url }}"
+alt="Original Image">
+
+<div class="image-info">
+
+<p>
+
+<strong>Size</strong>
+
+<br>
+
+{{ (original_bytes/1024/1024)|round(2) }} MB
+
+</p>
+
+<p>
+
+<strong>Resolution</strong>
+
+<br>
+
+{{ original_width }} × {{ original_height }}
+
+</p>
+
+</div>
+
+</div>
+
+<div class="image-card">
+
+<div class="status-badge">
+
+✨ AI Optimized
+
+</div>
+
+<img
+src="{{ image_url }}"
+alt="Optimized Image">
+
+<div class="image-info">
+
+<p>
+
+<strong>Size</strong>
+
+<br>
+
+{{ (transformed_bytes/1024/1024)|round(2) }} MB
+
+</p>
+
+<p>
+
+<strong>Resolution</strong>
+
+<br>
+
+{{ transformed_width }} × {{ transformed_height }}
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+<!-- AI REPORT -->
+
+<div class="report-card">
+
+<div class="status-badge">
+
+🤖 AI Optimization Report
+
+</div>
+
+<h2>
+
+Transformation Analysis
+
+</h2>
+
+<p>
+
+Snap Optimizer AI analyzed your uploaded image and applied
+Cloudinary AI transformations to improve quality and optimize
+the image based on your selected prompt.
+
+</p>
+
+<div class="ai-dashboard">
+
+<div class="dashboard-card">
+
+<h2>
+
+{{ prompt }}
+
+</h2>
+
+<p>
+
+Transformation
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>
+
+{{ (original_bytes/1024/1024)|round(2) }}
+
+MB
+
+</h2>
+
+<p>
+
+Original Size
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>
+
+{{ (transformed_bytes/1024/1024)|round(2) }}
+
+MB
+
+</h2>
+
+<p>
+
+Optimized Size
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>
+
+{{ ((1-transformed_bytes/original_bytes)*100)|round(0) }}%
+
+</h2>
+
+<p>
+
+Optimization
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- AI RECOMMENDATIONS -->
+
+<div class="recommendation">
+
+<h2>
+
+💡 AI Recommendations
+
+</h2>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<div class="recommend-icon">
+
+✨
+
+</div>
+
+<h3>
+
+Enhance
+
+</h3>
+
+<p>
+
+Improve brightness,
+sharpness and quality.
+
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<div class="recommend-icon">
+
+📱
+
+</div>
+
+<h3>
+
+Instagram
+
+</h3>
+
+<p>
+
+Export perfectly sized
+social media images.
+
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<div class="recommend-icon">
+
+💼
+
+</div>
+
+<h3>
+
+LinkedIn
+
+</h3>
+
+<p>
+
+Professional profile
+and banner creation.
+
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<div class="recommend-icon">
+
+⚡
+
+</div>
+
+<h3>
+
+Compression
+
+</h3>
+
+<p>
+
+Reduce image size
+without quality loss.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- DOWNLOAD SECTION -->
+
+<div class="report-card">
+
+<h2>
+
+⬇ Download Result
+
+</h2>
+
+<p>
+
+Your optimized image is ready for download.
+
+</p>
+
+<div class="buttons">
+
+<a
+
+href="{{ image_url }}"
+
+target="_blank"
+
+class="btn">
+
+<i class="bi bi-download"></i>
+
+Download Image
+
+</a>
+
+<a
+
+href="{{ image_url }}"
+
+target="_blank"
+
+class="btn">
+
+<i class="bi bi-arrows-fullscreen"></i>
+
+View Full Size
+
+</a>
+
+<a
+
+href="/"
+
+class="btn">
+
+<i class="bi bi-arrow-repeat"></i>
+
+Transform Another
+
+</a>
+
+</div>
+
+</div>
+<!-- AI TIPS -->
+
+<div class="report-card">
+
+<div class="status-badge">
+
+🚀 Pro Tips
+
+</div>
+
+<h2>
+
+Improve Your Results
+
+</h2>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<div class="recommend-icon">📸</div>
+
+<h3>Use HD Images</h3>
+
+<p>
+Higher resolution images produce better AI results.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<div class="recommend-icon">💡</div>
+
+<h3>Try More Prompts</h3>
+
+<p>
+Experiment with Enhance, HDR, Blur and Vintage effects.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<div class="recommend-icon">⚡</div>
+
+<h3>Compress Images</h3>
+
+<p>
+Reduce file size while maintaining visual quality.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<div class="recommend-icon">🌐</div>
+
+<h3>Social Ready</h3>
+
+<p>
+Export perfectly for Instagram, LinkedIn and YouTube.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="status-badge">
+
+<i class="bi bi-stars"></i>
+
+Powered by Cloudinary AI
+
+</div>
+
+<p style="margin-top:20px; color:#8FA7B6;">
+
+Built with ❤️ using Flask, Cloudinary AI and Modern Web Technologies.
+
+</p>
+
+</footer>
+
+</div>
+
+</div>
+
+<script>
+
+/* Smooth image appearance */
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.style.opacity="0";
+
+img.onload=()=>{
+
+img.style.transition="all .7s ease";
+
+img.style.opacity="1";
+
+img.style.transform="scale(1)";
+
+};
+
+});
+
+/* Card animation */
+
+const cards=document.querySelectorAll(".dashboard-card,.image-card,.recommend-card");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(40px)";
+
+card.style.transition=".7s ease";
+
+observer.observe(card);
+
+});
+
+/* Premium button hover */
+
+document.querySelectorAll(".btn").forEach(btn=>{
+
+btn.addEventListener("mouseenter",()=>{
+
+btn.style.transform="translateY(-5px) scale(1.03)";
+
+});
+
+btn.addEventListener("mouseleave",()=>{
+
+btn.style.transform="translateY(0)";
+
+});
+
+});
+
+</script>
+
 </body>
+
 </html>
