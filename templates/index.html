@@ -30,13 +30,64 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+    <div class="nav-logo">
+
+        <div class="logo-box">
+            ⚡
+        </div>
+
+        <div>
+
+            <h2>Snap Optimizer AI</h2>
+
+            <span>CREATE • OPTIMIZE • TRANSFORM</span>
+
+        </div>
+
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="#home">
+            <i class="bi bi-house-fill"></i>
+            Home
+        </a>
+
+
+
+       <a href="#" id="aboutBtn">
+    <i class="bi bi-info-circle-fill"></i>
+    About
+</a>
+
+        <a href="#contact">
+            <i class="bi bi-envelope-fill"></i>
+            Contact
+        </a>
+
+    </nav>
+
+    <div class="status">
+
+        <i class="bi bi-circle-fill"></i>
+
+        System Ready
+
+    </div>
+
+</header>
+
 <div id="tsparticles"></div>
 
 <div class="noise"></div>
 
 <div class="mouse-light"></div>
 
-<section class="hero">
+<section class="hero" id="home">
 
 <div class="glass">
 
@@ -202,8 +253,28 @@ Professional AI tools powered by Cloudinary
 </p>
 
 </div>
+    <div class="instruction-card">
 
-<div class="cards">
+    <div class="instruction-icon">
+        <i class="bi bi-lightbulb-fill"></i>
+    </div>
+
+    <div class="instruction-text">
+
+        <h2>Choose Your AI Tool</h2>
+
+        <p>
+            Select a category below based on your editing needs.
+            Choose an AI transformation, it will automatically appear
+            in the prompt box, then click
+            <strong>Transform Image</strong> to generate your optimized image.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="cards" id="features">
 
     <!-- AI EFFECTS -->
 
@@ -557,6 +628,43 @@ function closeModal(){
 document.getElementById("toolModal").style.display="none";
 
 }
+/*=========================
+      ABOUT MODAL
+=========================*/
+
+window.onload = function(){
+
+const aboutBtn = document.getElementById("aboutBtn");
+
+const aboutModal = document.getElementById("aboutModal");
+
+const closeBtn = document.querySelector(".close-modal");
+
+aboutBtn.onclick = function(e){
+
+e.preventDefault();
+
+aboutModal.style.display = "flex";
+
+};
+
+closeBtn.onclick = function(){
+
+aboutModal.style.display = "none";
+
+};
+
+window.onclick = function(e){
+
+if(e.target==aboutModal){
+
+aboutModal.style.display="none";
+
+}
+
+};
+
+};
 </script>
 <!-- ================= AI MODAL ================= -->
 
@@ -598,7 +706,7 @@ document.getElementById("toolModal").style.display="none";
 
 <!-- ================= PREMIUM FOOTER ================= -->
 
-<footer class="footer">
+<footer class="footer" id="contact">
 
     <div class="footer-top">
 
@@ -650,22 +758,34 @@ document.getElementById("toolModal").style.display="none";
         </div>
 
         <!-- Contact -->
+<div class="footer-card">
 
-        <div class="footer-card">
+    <i class="bi bi-share footer-icon"></i>
 
-            <i class="bi bi-envelope-paper footer-icon"></i>
+    <h3>Let's Connect</h3>
 
-            <h3>Connect</h3>
+    <p>Feel free to connect or explore my work.</p>
 
-            <p>📧 aashika9630@gmail.com</p>
+    <div class="social-links">
 
-            <p>💻 GitHub</p>
+        <a href="mailto:YOUR_EMAIL@gmail.com" target="_blank">
+            <i class="bi bi-envelope-fill"></i>
+            Email : aashika9630@gmail.com
+        </a>
 
-            <p>💼 LinkedIn</p>
+        <a href="https://github.com/aashi-1926" target="_blank">
+            <i class="bi bi-github"></i>
+            GitHub : aashi-1926
+        </a>
 
-            <p>🌍 Open to collaboration</p>
+        <a href="https://www.linkedin.com/in/aashikagupta1926" target="_blank">
+            <i class="bi bi-linkedin"></i>
+            LinkedIn : aashikagupta1926
+        </a>
 
-        </div>
+    </div>
+
+</div>
 
     </div>
 
@@ -680,6 +800,199 @@ document.getElementById("toolModal").style.display="none";
     </div>
 
 </footer>
+<!-- ================= ABOUT MODAL ================= -->
+
+
+<div id="aboutModal" class="modal">
+
+    <div class="modal-content" onclick="event.stopPropagation()">
+
+        <span class="close-modal" onclick="closeAbout()">&times;</span>
+
+        <div class="modal-logo">
+            ⚡
+        </div>
+
+        <h2>About Snap Optimizer AI</h2>
+
+        <p class="modal-subtitle">
+            Professional AI-powered image optimization platform built with Flask and Cloudinary AI.
+        </p>
+
+        <!-- Features -->
+       <div class="modal-section">
+
+
+    <p>
+        <strong>Snap Optimizer AI</strong> is an intelligent AI-powered image
+        optimization platform designed to simplify image editing with just a
+        few clicks. It enables users to enhance, transform, resize and optimize
+        images through a clean, modern and interactive web interface.
+    </p>
+
+</div>
+
+<div class="modal-section">
+
+    <h2>🖼 Upload Page</h2>
+
+    <ul class="feature-list">
+
+        <li>📤 Drag & Drop image upload</li>
+
+        <li>👀 Live image preview before processing</li>
+
+        <li>📂 Supports JPG, PNG and WEBP images</li>
+
+        <li>✨ Interactive AI Effects, Social Media and Professional tool cards</li>
+
+        <li>🤖 Custom AI prompt for personalized image transformations</li>
+
+        <li>⚡ One-click AI image processing</li>
+
+        <li>🎨 Modern glassmorphism user interface</li>
+
+        <li>🌌 Animated particles and gradient background</li>
+
+    </ul>
+
+</div>
+
+<div class="modal-section">
+
+    <h2>✨ AI Transformations</h2>
+
+    <div class="tech-grid">
+
+        <span>Auto Enhance</span>
+
+        <span>HDR Effect</span>
+
+        <span>Sharpen</span>
+
+        <span>Brightness</span>
+
+        <span>Blur</span>
+
+        <span>Black & White</span>
+
+        <span>Vintage</span>
+
+        <span>Background Removal</span>
+
+        <span>Instagram Post</span>
+
+        <span>Instagram Story</span>
+
+        <span>YouTube Thumbnail</span>
+
+        <span>LinkedIn Banner</span>
+
+        <span>Passport Photo</span>
+
+        <span>Profile Picture</span>
+
+        <span>Image Compression</span>
+
+    </div>
+
+</div>
+
+<div class="modal-section">
+
+    <h2>📊 Result Page</h2>
+
+    <ul class="feature-list">
+
+        <li>🖼 Side-by-side comparison of Original and Optimized images</li>
+
+        <li>📏 Original & optimized image resolution</li>
+
+        <li>💾 File size comparison</li>
+
+        <li>📈 Compression percentage analysis</li>
+
+        <li>📋 Optimization summary report</li>
+
+        <li>🔍 Full-size image preview</li>
+
+        <li>🔄 Transform another image instantly</li>
+
+    </ul>
+
+</div>
+
+<div class="modal-section">
+
+    <h2>⚙ Technology Stack</h2>
+
+    <div class="tech-grid">
+
+        <span>🐍 Python</span>
+
+        <span>🌐 Flask</span>
+
+        <span>☁ Cloudinary AI</span>
+
+        <span>🎨 HTML5</span>
+
+        <span>🎭 CSS3</span>
+
+        <span>⚡ JavaScript</span>
+
+        <span>Bootstrap Icons</span>
+
+        <span>Responsive UI</span>
+
+    </div>
+
+</div>
+
+<div class="modal-section">
+
+    <h2>👩‍💻 About the Developer</h2>
+
+    <p>
+
+        <strong>Aashika Gupta</strong>
+
+    </p>
+
+    <p>
+
+        AI & Backend Developer passionate about building modern
+        AI-powered web applications using Python, Flask and
+        Cloudinary AI.
+
+    </p>
+
+    <p>
+
+        Snap Optimizer AI was developed as a hackathon project for the
+        <strong>Cloudinary Creators Community June Mini Hack</strong>,
+        focusing on intelligent image transformation with a modern and
+        user-friendly experience.
+
+    </p>
+
+</div>
+
+
+
+        <!-- Project -->
+
+        <div class="modal-section">
+
+
+            <p>
+                Version 1.0
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 
