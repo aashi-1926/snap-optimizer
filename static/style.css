@@ -194,14 +194,14 @@ translateY(80px);
 
     align-items:center;
 
-    padding:70px 30px;
+    padding:35px 18px;
 
 }
 .glass{
 
     width:100%;
 
-    max-width:1450px;
+    max-width:900px;
 
     background:rgba(255,255,255,.05);
 
@@ -211,7 +211,7 @@ translateY(80px);
 
     border-radius:40px;
 
-    padding:70px;
+    padding:22px;
 
     text-align:center;
 
@@ -286,14 +286,14 @@ animation:float 5s infinite ease-in-out;
 }
 .badge i{
 
-font-size:18px;
+font-size:15px;
 
 color:#4EF0C3;
 
 }
 .hero h1{
 
-font-size:78px;
+font-size:42px;
 
 font-weight:900;
 
@@ -331,11 +331,11 @@ linear-gradient(
 }
 .hero-text{
 
-max-width:760px;
+max-width:650px;
 
 margin:auto;
 
-font-size:21px;
+font-size:15px;
 
 line-height:1.8;
 
@@ -346,7 +346,7 @@ margin-bottom:55px;
 }
 .upload-box{
 
-max-width:720px;
+max-width:560px;
 
 margin:50px auto;
 
@@ -361,7 +361,7 @@ justify-content:center;
 
 align-items:center;
 
-padding:70px;
+padding:22px;
 
 border-radius:35px;
 
@@ -395,9 +395,9 @@ box-shadow:
 }
 .upload-circle{
 
-width:110px;
+width:56px;
 
-height:110px;
+height:56px;
 
 border-radius:50%;
 
@@ -419,7 +419,7 @@ linear-gradient(
 
 );
 
-font-size:46px;
+font-size:20px;
 
 color:white;
 
@@ -445,7 +445,7 @@ font-weight:700;
 
 color:var(--muted);
 
-font-size:18px;
+font-size:15px;
 
 margin-bottom:10px;
 
@@ -461,7 +461,7 @@ letter-spacing:1px;
 }
 .upload-line{
 
-width:80px;
+width:56px;
 
 height:5px;
 
@@ -488,7 +488,7 @@ animation:pulseLine 2s infinite;
 
 margin-top:25px;
 
-font-size:16px;
+font-size:15px;
 
 font-weight:600;
 
@@ -556,7 +556,7 @@ left:130%;
 
 0%{
 
-width:80px;
+width:56px;
 
 opacity:.5;
 
@@ -572,7 +572,7 @@ opacity:1;
 
 100%{
 
-width:80px;
+width:56px;
 
 opacity:.5;
 
@@ -589,9 +589,9 @@ display:grid;
 
 grid-template-columns:repeat(4,1fr);
 
-gap:25px;
+gap:16px;
 
-margin:60px 0;
+margin:18px 0;
 
 }
 
@@ -605,7 +605,7 @@ border:1px solid rgba(255,255,255,.08);
 
 border-radius:28px;
 
-padding:30px;
+padding:22px;
 
 transition:.45s;
 
@@ -653,7 +653,7 @@ box-shadow:0 30px 80px rgba(52,211,153,.15);
 
 .stat h2{
 
-font-size:42px;
+font-size:20px;
 
 font-weight:800;
 
@@ -682,7 +682,7 @@ margin:40px 0 35px;
 
 .feature-title h2{
 
-font-size:46px;
+font-size:20px;
 
 font-weight:800;
 
@@ -694,7 +694,7 @@ margin-bottom:10px;
 
 color:var(--muted);
 
-font-size:18px;
+font-size:15px;
 
 }
 .cards{
@@ -703,7 +703,7 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:30px;
+gap:18px;
 
 margin-top:40px;
 
@@ -718,7 +718,7 @@ border:1px solid rgba(255,255,255,.08);
 
 border-radius:30px;
 
-padding:35px;
+padding:14px;
 
 transition:.45s;
 
@@ -804,7 +804,7 @@ background:linear-gradient(135deg,#14B8A6,#34D399);
 }
 .card h3{
 
-font-size:28px;
+font-size:20px;
 
 margin-bottom:15px;
 
@@ -818,7 +818,7 @@ line-height:1.8;
 
 margin-bottom:25px;
 
-font-size:16px;
+font-size:15px;
 
 }
 .card button{
@@ -858,7 +858,7 @@ border:1px solid rgba(255,255,255,.08);
 
 border-radius:30px;
 
-padding:40px;
+padding:16px;
 
 backdrop-filter:blur(25px);
 
@@ -904,7 +904,7 @@ background:rgba(255,255,255,.03);
 
 color:white;
 
-font-size:18px;
+font-size:15px;
 
 outline:none;
 
@@ -1019,12 +1019,12 @@ font-size:15px;
 
 .result-container{
 
-max-width:1500px;
-
-margin:70px auto;
-
-padding:40px;
-
+ display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    width:100%;
+    min-height:100vh;
+    padding:40px 20px;
 }
 .report-card{
 
@@ -1036,7 +1036,7 @@ border:1px solid rgba(255,255,255,.08);
 
 border-radius:35px;
 
-padding:40px;
+padding:16px;
 
 margin-bottom:45px;
 
@@ -1046,7 +1046,7 @@ box-shadow:0 30px 80px rgba(0,0,0,.35);
 
 .report-card h2{
 
-font-size:42px;
+font-size:20px;
 
 margin-bottom:15px;
 
@@ -1056,7 +1056,7 @@ margin-bottom:15px;
 
 color:var(--muted);
 
-font-size:18px;
+font-size:15px;
 
 line-height:1.7;
 
@@ -1064,12 +1064,10 @@ line-height:1.7;
 .image-comparison{
 
 display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:35px;
-
-margin-top:40px;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    justify-content:center;
+    align-items:start;
 
 }
 .image-card{
@@ -1118,7 +1116,7 @@ display:grid;
 
 grid-template-columns:repeat(4,1fr);
 
-gap:25px;
+gap:16px;
 
 margin-top:45px;
 }
@@ -1130,7 +1128,7 @@ rgba(255,255,255,.05),
 rgba(255,255,255,.02)
 );
 
-padding:30px;
+padding:22px;
 
 border-radius:28px;
 
@@ -1173,7 +1171,7 @@ color:var(--muted);
 
 margin-top:45px;
 
-padding:35px;
+padding:14px;
 
 background:rgba(255,255,255,.05);
 
@@ -1208,7 +1206,7 @@ font-size:17px;
 
 margin-top:40px;
 
-padding:35px;
+padding:14px;
 
 background:linear-gradient(
 135deg,
@@ -1227,16 +1225,16 @@ display:flex;
 
 justify-content:center;
 
-gap:25px;
+gap:16px;
 
-margin-top:50px;
+margin-top:24px;
 
 flex-wrap:wrap;
 
 }
 .btn{
 
-padding:18px 35px;
+padding:8px 18px;
 
 border-radius:18px;
 
@@ -1355,19 +1353,21 @@ font-size:55px;
 
 .hero{
 
-padding:30px;
+padding:22px;
 
 }
 
 .glass{
-
-padding:30px;
+width:100%;
+    max-width:1200px;
+    margin:0 auto;
+padding:22px;
 
 }
 
 .hero h1{
 
-font-size:42px;
+font-size:20px;
 
 }
 
@@ -1391,7 +1391,7 @@ width:100%;
 
 .prompt-box{
 
-font-size:16px;
+font-size:15px;
 
 }
 
@@ -1809,7 +1809,7 @@ padding-bottom:30px;
 }
 
 .card{
-    padding:24px;
+    padding:14px;
 }
 
 }
@@ -1879,7 +1879,7 @@ padding-bottom:30px;
 
     justify-content:center;
 
-    font-size:28px;
+    font-size:20px;
 
     background:linear-gradient(135deg,#34D399,#38BDF8);
 
@@ -1920,7 +1920,7 @@ width:92%;
 
 max-width:1500px;
 
-padding:18px 35px;
+padding:8px 18px;
 
 display:flex;
 
@@ -1970,7 +1970,7 @@ justify-content:center;
 
 align-items:center;
 
-font-size:28px;
+font-size:20px;
 
 color:white;
 
@@ -1981,7 +1981,7 @@ animation:floating 4s infinite;
 
 .logo-text h2{
 
-font-size:24px;
+font-size:20px;
 
 font-weight:800;
 
@@ -2250,9 +2250,9 @@ transform:translateY(0);
 
 width:100%;
 
-margin-top:35px;
+margin-top:24px;
 
-padding:35px;
+padding:14px;
 
 background:rgba(255,255,255,.05);
 
@@ -2284,7 +2284,7 @@ color:#B8D5E2;
 
 margin-bottom:35px;
 
-font-size:16px;
+font-size:15px;
 
 }
 
@@ -2300,7 +2300,7 @@ color:#46F2D7;
 
 margin-bottom:18px;
 
-font-size:24px;
+font-size:20px;
 
 font-weight:700;
 
@@ -2393,7 +2393,7 @@ display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-gap:25px;
+gap:16px;
 
 margin-top:30px;
 
@@ -2489,7 +2489,7 @@ background:#102632;
 
 border-radius:25px;
 
-padding:35px;
+padding:14px;
 
 }
 
@@ -2560,7 +2560,7 @@ color:white;
 
 margin:90px 0 0;
 
-padding:70px 30px;
+padding:35px 18px;
 
 text-align:center;
 
@@ -2576,7 +2576,7 @@ border:1px solid rgba(255,255,255,.08);
 
 .cta-section h2{
 
-font-size:42px;
+font-size:20px;
 
 color:#fff;
 
@@ -2588,7 +2588,7 @@ margin-bottom:15px;
 
 color:#cbd5e1;
 
-font-size:18px;
+font-size:15px;
 
 margin-bottom:35px;
 
@@ -2602,7 +2602,7 @@ border:none;
 
 border-radius:50px;
 
-font-size:18px;
+font-size:15px;
 
 font-weight:700;
 
@@ -2665,7 +2665,7 @@ margin-bottom:55px;
 
 .footer-top h2{
 
-font-size:42px;
+font-size:20px;
 
 font-weight:800;
 
@@ -2677,7 +2677,7 @@ margin-bottom:15px;
 
 .footer-top p{
 
-font-size:18px;
+font-size:15px;
 
 color:#B7CBD8;
 
@@ -2691,7 +2691,7 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:30px;
+gap:18px;
 
 }
 
@@ -2699,7 +2699,7 @@ gap:30px;
 
 .footer-card{
 
-padding:35px;
+padding:14px;
 
 border-radius:25px;
 
@@ -2743,7 +2743,7 @@ color:white;
 
 margin-bottom:18px;
 
-font-size:24px;
+font-size:20px;
 
 }
 
@@ -2753,7 +2753,7 @@ color:#C6D5DE;
 
 line-height:2;
 
-font-size:16px;
+font-size:15px;
 
 }
 
@@ -2875,9 +2875,9 @@ width:90%;
 
 max-width:1200px;
 
-height:78px;
+height:54px;
 
-padding:18px 35px;
+padding:8px 18px;
 
 display:flex;
 
@@ -2911,9 +2911,9 @@ gap:15px;
 
 .logo-box{
 
-width:56px;
+width:46px;
 
-height:56px;
+height:46px;
 
 border-radius:14px;
 
@@ -2925,7 +2925,7 @@ align-items:center;
 
 background:linear-gradient(135deg,#34D399,#38BDF8);
 
-font-size:28px;
+font-size:20px;
 
 color:white;
 
@@ -2933,7 +2933,7 @@ color:white;
 
 .nav-logo h2{
 
-font-size:28px;
+font-size:20px;
 
 color:white;
 
@@ -3090,7 +3090,7 @@ max-height:85vh;
 
 overflow-y:auto;
 
-padding:40px;
+padding:16px;
 
 border-radius:30px;
 
@@ -3146,7 +3146,7 @@ color:#B7CBD8;
 
 margin-bottom:35px;
 
-font-size:18px;
+font-size:15px;
 
 line-height:1.6;
 
@@ -3294,7 +3294,7 @@ display:flex;
 
 align-items:center;
 
-gap:25px;
+gap:16px;
 
 margin:50px 0 35px;
 
@@ -3346,7 +3346,7 @@ margin-bottom:10px;
 
     line-height:1.8;
 
-    font-size:16px;
+    font-size:15px;
 
 }
 /* ===========================
@@ -3405,7 +3405,7 @@ margin-bottom:10px;
     }
 
     .upload-box{
-        padding:20px;
+        padding:16px;
     }
 
     button{
