@@ -215,7 +215,7 @@ CLOUDINARY_API_SECRET=YOUR_API_SECRET
 ### Run the project
 
 ```bash
-python img-app.py
+python app.py
 ```
 
 Open
