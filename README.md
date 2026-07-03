@@ -1,8 +1,5 @@
-<div align="center">
-
 # ⚡ Snap Optimizer AI
 
----
 <div align="center">
 
 # 🚀 AI-Powered Image Optimization Platform
