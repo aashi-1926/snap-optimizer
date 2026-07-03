@@ -3349,3 +3349,66 @@ margin-bottom:10px;
     font-size:16px;
 
 }
+/* ===========================
+   MOBILE RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 768px) {
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero{
+        padding: 120px 20px 40px;
+    }
+
+    .hero h1{
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .upload-box{
+        width:95%;
+        padding:30px 20px;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer{
+        padding:30px 20px;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .logo h2{
+        font-size:1.6rem;
+    }
+
+    .upload-box{
+        padding:20px;
+    }
+
+    button{
+        width:100%;
+    }
+}
