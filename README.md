@@ -1,173 +1,198 @@
+<div align="center">
+
 # ⚡ Snap Optimizer AI
 
 ---
-
 <div align="center">
 
-### 🚀 Transform Images Beautifully with AI
+# 🚀 AI-Powered Image Optimization Platform
 
-Professional AI-powered image optimization platform built with **Python**, **Flask** and **Cloudinary AI**.
+Transform, enhance, resize, and optimize your images effortlessly using **Cloudinary AI**, **Python**, and **Flask**.
 
-Upload ----> AI Tools ---> Transformation ---> Result
+Upload → Choose AI Tool → Transform → Download
+
+🌐 **Live Demo:** https://snap-optimizer.onrender.com
+
+💻 **Repository:** https://github.com/aashi-1926/snap-optimizer
 
 </div>
 
 ---
 
-## 📖 Overview
+# 🌟 About the Project
 
-Snap Optimizer AI is an AI-powered web application that simplifies image editing through intelligent Cloudinary transformations.
+Snap Optimizer AI is a modern AI-powered web application that makes image editing simple and fast.
 
-Instead of using complicated editing software, users simply upload an image, choose an AI transformation or type a prompt, and instantly receive an optimized version.
+Users can upload an image, choose from multiple AI-powered transformations, or describe the desired edit using natural language. Cloudinary AI processes the image in seconds and returns an optimized version with detailed comparison statistics.
 
-The application provides a modern, responsive interface with fast cloud-based processing and detailed optimization reports.
+Designed with a clean glassmorphism interface and responsive layout, the application delivers a smooth editing experience on both desktop and mobile devices.
 
 ---
 
 # ✨ Features
 
-### 🎨 AI Image Enhancement
+## 🎨 AI Enhancement
 
-- Auto Image Enhancement
+- Auto Enhance
 - HDR Enhancement
 - Sharpen Image
 - Brightness Adjustment
 
-### 🎭 Image Effects
+## 🎭 Creative Effects
 
 - Black & White
 - Grayscale
-- Vintage Effect
-- Blur Effect
+- Vintage
+- Blur
 
-### 🌄 Background Tools
+## 🌄 Background Editing
 
 - Remove Background
 
-### 📱 Social Media Tools
+## 📱 Social Media Ready
 
 - Instagram Post
 - Instagram Story
 - YouTube Thumbnail
 - LinkedIn Banner
 
-### 💼 Professional Tools
+## 💼 Professional Editing
 
 - Passport Photo
 - Profile Picture
-- LinkedIn Profile Photo
+- LinkedIn Profile
 - Image Compression
 
 ---
 
-# 🖼 Upload Page
+# 🚀 Key Highlights
 
-✔ Drag & Drop Upload
+✅ Modern Glassmorphism UI
 
-✔ Live Image Preview
+✅ Drag & Drop Upload
 
-✔ AI Prompt Input
+✅ AI Prompt Support
 
-✔ Professional Glassmorphism UI
+✅ Cloudinary AI Integration
 
-✔ Cloudinary Image Processing
+✅ Before & After Comparison
 
-✔ Responsive Design
+✅ Image Size Comparison
 
----
+✅ Resolution Details
 
-# 📊 Result Dashboard
+✅ One-click Download
 
-After processing an image, users receive:
-
-- Side-by-side comparison
-- Original Image
-- Optimized Image
-- Resolution Comparison
-- File Size Comparison
-- Compression Percentage
-- Download Optimized Image
-- Transform Another Image
+✅ Responsive Design
 
 ---
 
-# ⚡ How It Works
+# ⚙ Workflow
 
-1️⃣ Upload an Image
-
-↓
-
-2️⃣ Choose an AI Tool
-
-↓
-
-3️⃣ AI Prompt is Filled Automatically
-
-↓
-
-4️⃣ Click Transform Image
-
-↓
-
-5️⃣ Cloudinary Processes Image
-
-↓
-
-6️⃣ View Results & Download
+```text
+Upload Image
+      │
+      ▼
+Select AI Tool
+      │
+      ▼
+Prompt Generated
+      │
+      ▼
+Transform Image
+      │
+      ▼
+Cloudinary AI
+      │
+      ▼
+Download Optimized Image
+```
 
 ---
 
-# ☁ Cloudinary Integration
+# ☁ Cloudinary AI Features
 
-Snap Optimizer AI uses Cloudinary AI to perform intelligent image transformations.
+Snap Optimizer AI uses Cloudinary AI to provide intelligent image optimization.
 
-Supported Cloudinary features include:
+Supported transformations include:
 
 - AI Enhancement
 - Background Removal
-- Image Resizing
 - Smart Cropping
 - Automatic Compression
-- Format Optimization
 - Quality Optimization
+- Format Optimization
+- Image Resizing
+
+---
+
+# 🖼 Screenshots
+
+## 🏠 Home Page
+
+![Home](Screenshots/upload.jpeg)
+
+---
+
+## 🛠 AI Tools
+
+![AI Tools](Screenshots/tools.jpeg)
+
+---
+
+## 📊 Result Dashboard
+
+![Result](Screenshots/result.jpeg)
+
+---
+
+## 👨‍💻 Developer Section
+
+![Developer](Screenshots/details.jpeg)
 
 ---
 
 # 🛠 Tech Stack
 
-| Technology | Purpose |
-|------------|----------|
+| Technology | Usage |
+|------------|-------|
 | Python | Backend |
 | Flask | Web Framework |
-| Cloudinary AI | Image Processing |
+| Cloudinary AI | AI Image Processing |
 | HTML5 | Frontend |
 | CSS3 | Styling |
-| JavaScript | User Interaction |
+| JavaScript | Interactivity |
 | Bootstrap Icons | Icons |
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 snap-optimizer/
 
-│
-├── img-app.py
+├── app.py
 ├── README.md
+├── requirements.txt
 ├── .env
 ├── package.json
 ├── skills-lock.json
 │
-├── .agents/
+├── Screenshots/
+│   ├── upload.jpeg
+│   ├── tools.jpeg
+│   ├── result.jpeg
+│   └── details.jpeg
 │
 ├── static/
 │   ├── style.css
-│   ├── particle.js
+│   └── particle.js
 │
-└── templates/
-    ├── index.html
-    └── result.html
+├── templates/
+│   ├── index.html
+│   └── result.html
+│
+└── .agents/
 ```
 
 ---
@@ -176,7 +201,7 @@ snap-optimizer/
 
 This project was developed using the **Cloudinary Transformations Skill** from the Cloudinary Skills Pack.
 
-The skill assisted during development by providing accurate Cloudinary transformation workflows for AI-powered image optimization.
+The Skills Pack helped integrate AI-powered Cloudinary transformations efficiently during development.
 
 Installed Skill:
 
@@ -186,25 +211,27 @@ Installed Skill:
 
 # 🚀 Installation
 
-### Clone the repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/snap-optimizer.git
+git clone https://github.com/aashi-1926/snap-optimizer.git
 ```
 
-### Open project
+### Enter Project
 
 ```bash
 cd snap-optimizer
 ```
 
-### Install dependencies
+### Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Create `.env`
+### Configure Environment Variables
+
+Create a `.env` file.
 
 ```env
 CLOUDINARY_CLOUD_NAME=YOUR_CLOUD_NAME
@@ -212,13 +239,13 @@ CLOUDINARY_API_KEY=YOUR_API_KEY
 CLOUDINARY_API_SECRET=YOUR_API_SECRET
 ```
 
-### Run the project
+### Run
 
 ```bash
 python app.py
 ```
 
-Open
+Visit:
 
 ```
 http://127.0.0.1:5000
@@ -226,32 +253,17 @@ http://127.0.0.1:5000
 
 ---
 
-# 📸 Screenshots
+# 🔮 Future Enhancements
 
-## 🏠 Home Page
-
-(Add Screenshot)
-
----
-
-## 📊 Result Page
-
-(Add Screenshot)
-
----
-
-# 🎯 Future Improvements
-
-- 🎥 AI-Powered Video Transformation
-- ✂️ AI Video Background Removal
-- 📹 Video Compression & Optimization
-- 🎞️ Video Resizing for Social Media Platforms
-- 🎯 AI Object Detection
-- 😊 AI Face Enhancement & Portrait Retouching
-- 📦 Batch Image & Video Processing
-- ☁️ Secure User Authentication & Personal Cloud Gallery
-- 📥 Download History & Project Management
-- 🤖 Natural Language Image & Video Editing
+- AI Video Editing
+- Video Compression
+- AI Face Enhancement
+- AI Object Detection
+- Batch Image Processing
+- User Authentication
+- Personal Cloud Gallery
+- Download History
+- AI Image Generation
 
 ---
 
@@ -259,20 +271,21 @@ http://127.0.0.1:5000
 
 ## Aashika Gupta
 
-AI & Backend Developer
+**AI & Backend Developer**
 
-Passionate about building modern AI-powered web applications using Python, Flask and Cloudinary AI.
+Passionate about creating modern AI-powered web applications with Python, Flask, and Cloudinary AI.
 
-### Connect with Me
+### 📬 Connect With Me
 
-📧 Email:
+📧 **Email**
+
 aashika9630@gmail.com
 
-💼 LinkedIn
+💼 **LinkedIn**
 
 https://linkedin.com/in/aashikagupta1926
 
-💻 GitHub
+💻 **GitHub**
 
 https://github.com/aashi-1926
 
@@ -280,16 +293,16 @@ https://github.com/aashi-1926
 
 # ❤️ Acknowledgements
 
-Built for the **Cloudinary Creators Community June Mini Hack** using Cloudinary AI and Flask.
+Developed for the **Cloudinary Creators Community June Mini Hack**.
 
-Special thanks to the Cloudinary Developer Relations Team for organizing this hackathon.
+Special thanks to the Cloudinary Developer Relations Team for providing the Cloudinary Skills Pack and supporting developers in building AI-powered applications.
 
 ---
 
 <div align="center">
 
-⭐ If you like this project, consider giving it a star!
+### ⭐ If you found this project helpful, consider giving it a Star!
 
-Made with ❤️ by Aashika Gupta
+Made with ❤️ by **Aashika Gupta**
 
 </div>

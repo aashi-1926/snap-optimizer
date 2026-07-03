@@ -180,9 +180,11 @@ translateY(80px);
 /* ==========================================
    HERO SECTION
 ========================================== */
+/* Prevent hero from hiding behind navbar */
+
 
 .hero{
-     padding:140px 60px 80px;
+     padding:73px 60px 80px;
 
     width:100%;
 
@@ -194,7 +196,7 @@ translateY(80px);
 
     align-items:center;
 
-    padding:35px 18px;
+
 
 }
 .glass{
@@ -1910,17 +1912,17 @@ padding-bottom:30px;
 
 position:fixed;
 
-top:20px;
-
+top:10px;
+height: 62px;
 left:50%;
 
 transform:translateX(-50%);
 
-width:92%;
+width:88%;
 
-max-width:1500px;
+max-width:1000px;
 
-padding:8px 18px;
+padding:8px 22px;
 
 display:flex;
 
